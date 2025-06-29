@@ -200,8 +200,8 @@ export const GameInterface: React.FC<GameInterfaceProps> = ({
   };
 
   return (
-    <div className="h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 p-3 flex flex-col">
-      <div className="max-w-md mx-auto w-full flex flex-col h-full">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 p-3 flex flex-col">
+      <div className="max-w-md mx-auto w-full flex flex-col min-h-screen">
         {/* Compact Header */}
         <div className="liquid-glass-header mb-4 py-3 px-4 animate-slide-up">
           <div className="flex items-center justify-between">

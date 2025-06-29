@@ -48,7 +48,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({
   const CurrentIcon = currentSpeechMode.icon;
 
   return (
-    <div className="h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 flex items-center justify-center px-4 py-8">
       <div className="liquid-glass-card w-full max-w-sm animate-scale-in relative">
         {/* Speech Settings Popup */}
         {showSpeechMenu && (
@@ -129,7 +129,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe 
                 className="absolute top-0 left-0 w-full h-full rounded-xl"
-                src="https://www.youtube-nocookie.com/embed/fsRdVvt4zlw?si=9V8wKNT8UKuu52FL&amp;controls=1&amp;rel=0&amp;playsinline=1&amp;modestbranding=1&amp;autoplay=0" 
+                src="https://www.youtube-nocookie.com/embed/fsRdVvt4zlw?si=9V8wKNT8UKuu52FL&controls=1&rel=0&playsinline=1&modestbranding=1&autoplay=0" 
                 title="VocAIbulary Demo Video" 
                 frameBorder="0" 
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

@@ -8,6 +8,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Ensure proper scrolling on all devices */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
@@ -16,6 +19,19 @@
     font-feature-settings: 'kern' 1;
     letter-spacing: -0.01em;
     font-weight: 300;
+    /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+    /* Ensure proper mobile viewport handling */
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+
+  /* Ensure root container takes full height */
+  #root {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    display: flex;
+    flex-direction: column;
   }
   
   /* Custom scrollbar with subtle glass effect */
@@ -46,6 +62,16 @@
   
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Prevent zoom on input focus on iOS */
+  @media screen and (max-width: 768px) {
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    select {
+      font-size: 16px !important;
+    }
   }
 }
 
@@ -211,6 +237,23 @@
   .glow-red {
     box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
   }
+
+  /* Safe area utilities for mobile devices */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+  
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
 }
 
 /* Animations */
@@ -230,4 +273,25 @@
 
 .animate-glow {
   animation: glow 2s ease-in-out infinite;
+}
+
+/* Responsive improvements */
+@media (max-height: 600px) {
+  .liquid-glass-card {
+    @apply p-4;
+  }
+  
+  .liquid-glass-game-card {
+    @apply p-4;
+  }
+}
+
+@media (max-width: 640px) {
+  .liquid-glass-card {
+    @apply p-6;
+  }
+  
+  .liquid-glass-game-card {
+    @apply p-6;
+  }
 }
