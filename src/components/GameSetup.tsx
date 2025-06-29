@@ -123,18 +123,19 @@ export const GameSetup: React.FC<GameSetupProps> = ({
           />
         </a>
 
-        {/* YouTube Video Embed */}
+        {/* YouTube Video Embed - Fixed with nocookie domain */}
         <div className="mb-6 animate-fade-in-up">
           <div className="liquid-glass-card p-4 rounded-2xl">
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe 
                 className="absolute top-0 left-0 w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/fsRdVvt4zlw?si=9V8wKNT8UKuu52FL" 
+                src="https://www.youtube-nocookie.com/embed/fsRdVvt4zlw?si=9V8wKNT8UKuu52FL&amp;controls=1&amp;rel=0&amp;playsinline=1&amp;modestbranding=1&amp;autoplay=0" 
                 title="VocAIbulary Demo Video" 
                 frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerPolicy="strict-origin-when-cross-origin" 
                 allowFullScreen
+                loading="lazy"
               />
             </div>
             <p className="text-xs text-gray-600 text-center mt-2 font-light">
