@@ -123,6 +123,26 @@ export const GameSetup: React.FC<GameSetupProps> = ({
           />
         </a>
 
+        {/* YouTube Video Embed */}
+        <div className="mb-6 animate-fade-in-up">
+          <div className="liquid-glass-card p-4 rounded-2xl">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe 
+                className="absolute top-0 left-0 w-full h-full rounded-xl"
+                src="https://www.youtube.com/embed/fsRdVvt4zlw?si=9V8wKNT8UKuu52FL" 
+                title="VocAIbulary Demo Video" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+              />
+            </div>
+            <p className="text-xs text-gray-600 text-center mt-2 font-light">
+              Watch how VocAIbulary works
+            </p>
+          </div>
+        </div>
+
         {/* App Header with Speech Settings Button */}
         <div className="flex items-center justify-between mb-6">
           {/* Speech Settings Button - Moved to left */}
